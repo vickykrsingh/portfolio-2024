@@ -1,4 +1,5 @@
 import React from "react";
+import ParticlesComponent from "./ParticlesComponent";
 const About = () => {
   const info = [{ text: "Completed Projects", count: "24" }];
   return (
@@ -6,6 +7,7 @@ const About = () => {
       id="about"
       className="lg:py-10 py-20 text-white min-h-screen w-full flex flex-col items-center justify-center bg-transparent sm:px-10 px-3"
     >
+      <ParticlesComponent/>
       <h3 className="text-4xl font-semibold">
         About <span className="text-cyan-600">Me</span>
       </h3>

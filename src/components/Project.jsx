@@ -5,6 +5,7 @@ import project3 from "../assets/images/project-3.jpg";
 import project4 from "../assets/images/project-4.png";
 import project5 from "../assets/images/project-5.png";
 import project6 from "../assets/images/snapnext_img.png"
+import ParticlesComponent from "./ParticlesComponent";
 
 const Project = () => {
   const [category,setCategory] = useState("all")
@@ -79,6 +80,7 @@ const Project = () => {
   },[category])
   return (
     <section className="mx-auto pt-[10vh] lg:pt-10 w-[90%] flex items-center justify-center flex-col min-h-screen">
+      <ParticlesComponent/>
       <div class="flex items-center justify-center py-4 md:py-8 flex-wrap gap-2">
         <button
           type="button"

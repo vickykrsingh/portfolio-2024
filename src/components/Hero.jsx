@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ParticlesComponent from "./ParticlesComponent";
 const Hero = () => {
   const social_media = [
     {link:"https://www.instagram.com/m.r._vicky_/",logo:"logo-instagram"},
@@ -9,8 +10,9 @@ const Hero = () => {
   ];
   return (
     <>
+    <ParticlesComponent/>
       <div className="flex items-center justify-center w-full min-h-screen">
-        <div className="md:text-left text-center flex items-center justify-center flex-col gap-1">
+        <div className="md:text-left text-center flex items-center justify-center flex-col gap-1 z-50">
           <h1 className="md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold flex flex-col items-center justify-center">
             <span className="text-cyan-600 md:text-6xl text-5xl block text-center">
               Hi!,

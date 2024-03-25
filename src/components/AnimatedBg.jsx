@@ -4,7 +4,7 @@ import {SiNextdotjs,SiExpress,SiMysql,SiJavascript, SiMongodb, SiTypescript} fro
 
 function AnimatedBg() {
   return (
-    <div class="area">
+    <div className="area z-50">
       <ul class="circles">
         <li className='animated-box'>{<FaReact className='animated-icon'/>}</li>
         <li className='animated-box'>{<FaPython className='animated-icon'/>}</li>
