@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import ParticlesComponent from "./ParticlesComponent";
 const Hero = () => {
   const social_media = [
-    {link:"https://www.instagram.com/m.r._vicky_/",logo:"logo-instagram"},
-    {link:"https://www.facebook.com/profile.php?id=100013434069564",logo:"logo-facebook"},
     {link:"https://www.linkedin.com/in/vickykumar27/",logo:"logo-linkedin"},
-    {link:"https://twitter.com/VickyKu30424200",logo:"logo-twitter"},
+    {link:"https://github.com/vickykrsingh",logo:"logo-github"},
   ];
   return (
     <>
@@ -25,7 +23,7 @@ const Hero = () => {
           Full-Stack MERN Developer Building Seamless Digital Experiences
           </h4>
           <div className="flex gap-4">
-          <a target="_blank" href="https://drive.google.com/file/d/1b7k6i-3tJWfHo983kNDMFxgP0xIbkP9f/view?usp=drive_link"><button className="btn-primary mt-8">Resume</button></a>
+          <a target="_blank" href="https://drive.google.com/file/d/17TbB6Wzkoppx5JjwsFafsWYZbs3NN3J_/view?usp=sharing"><button className="btn-primary mt-8">Resume</button></a>
           <Link to="/contact" className="btn-primary mt-8">Contact</Link>
           </div>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
