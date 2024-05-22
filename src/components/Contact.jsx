@@ -13,7 +13,7 @@ const Contact = () => {
   ];
   return (
     <section id="contact" className="py-10 px-3 text-white min-h-screen">
-      <ParticlesComponent/>
+      {/* <ParticlesComponent/> */}
       <div className="text-center mt-8">
         <h3 className="text-4xl font-semibold">
           Contact <span className="text-cyan-600">Me</span>

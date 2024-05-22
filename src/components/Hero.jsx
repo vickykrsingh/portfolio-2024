@@ -10,7 +10,7 @@ const Hero = () => {
   ];
   return (
     <>
-    <ParticlesComponent/>
+    {/* <ParticlesComponent/> */}
       <div className="flex items-center justify-center w-full min-h-screen">
         <div className="md:text-left text-center flex items-center justify-center flex-col gap-1 z-50">
           <h1 className="md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold flex flex-col items-center justify-center">

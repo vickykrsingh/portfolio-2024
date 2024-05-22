@@ -4,116 +4,131 @@ import project2 from "../assets/images/project-2.jpg";
 import project3 from "../assets/images/project-3.jpg";
 import project4 from "../assets/images/project-4.png";
 import project5 from "../assets/images/project-5.png";
-import project6 from "../assets/images/snapnext_img.png"
+import project6 from "../assets/images/snapnext_img.png";
 import ParticlesComponent from "./ParticlesComponent";
 
 const Project = () => {
-  const [category,setCategory] = useState("all")
-  const [project,setProject] = useState([])
+  const [category, setCategory] = useState("all");
+  const [project, setProject] = useState([]);
+  const [imageLoaded, setImageLoaded] = useState({});
+
   const projects = [
     {
-      _id:1,
+      _id: 1,
       img: project1,
       name: "Ecommerce App",
       github_link: "https://github.com/vickykrsingh/DD-Product.git",
       live_link: "https://ddproduct.cyclic.app",
       tech_stack: "React.js Express.js Mongodb Node.js Bootstrap",
-      category:"fullstack"
+      category: "fullstack"
     },
     {
-      _id:2,
+      _id: 2,
       img: project2,
       name: "keeps notes",
       github_link: "https://github.com/vickykrsingh/GoogleKeep.git",
       live_link: "https://deadlynotes.netlify.app/",
       tech_stack: "HTML5 CSS3 Javascript",
-      category:"frontend"
+      category: "frontend"
     },
     {
-      _id:3,
+      _id: 3,
       img: project3,
       name: "Portfolio",
       github_link: "https://github.com/vickykrsingh/myportfolio.git",
       live_link: "https://vickykumar.netlify.app",
       tech_stack: "React.js Firebase",
-      category:"frontend"
+      category: "frontend"
     },
     {
-      _id:4,
+      _id: 4,
       img: project4,
       name: "Pokemon Pokedex",
       github_link: "https://github.com/vickykrsingh/TheGoodGameTheory",
       live_link: "https://the-good-game-theory-one.vercel.app/",
       tech_stack: "React.js tailwindcss contextApi",
-      category:"frontend"
+      category: "frontend"
     },
     {
-      _id:5,
+      _id: 5,
       img: project5,
       name: "Ecommerce frontend",
       github_link: "https://github.com/vickykrsingh/ecom-tailwind",
       live_link: "https://ecom-tailwind-98kq.vercel.app/",
       tech_stack: "React.js tailwindCss Redux DaisyUI",
-      category:"frontend"
+      category: "frontend"
     },
     {
-      _id:6,
+      _id: 6,
       img: project6,
       name: "Snapchat clone",
       github_link: "https://github.com/vickykrsingh/snapchat_clone.git",
       live_link: "https://snapchat-clone-ashy-alpha.vercel.app",
       tech_stack: "Next.js Typescript Mongodb ShadCn UI",
-      category:"fullstack"
+      category: "fullstack"
     }
   ];
 
-  useEffect(()=>{
-    if(category==="frontend"){
-      let FilteredProjects = projects.filter((p)=>p.category==="frontend")
-      setProject(FilteredProjects)
-    }else if(category==="fullstack"){
-      let FilteredProjects = projects.filter((p)=>p.category==="fullstack")
-      setProject(FilteredProjects)
-    }else{
-      setProject(projects)
+  useEffect(() => {
+    if (category === "frontend") {
+      let FilteredProjects = projects.filter((p) => p.category === "frontend");
+      setProject(FilteredProjects);
+    } else if (category === "fullstack") {
+      let FilteredProjects = projects.filter((p) => p.category === "fullstack");
+      setProject(FilteredProjects);
+    } else {
+      setProject(projects);
     }
-  },[category])
+  }, [category]);
+
+  const handleImageLoad = (id) => {
+    setImageLoaded((prevState) => ({ ...prevState, [id]: true }));
+  };
+
   return (
     <section className="mx-auto pt-[10vh] lg:pt-10 w-[90%] flex items-center justify-center flex-col min-h-screen">
-      <ParticlesComponent/>
-      <div class="flex items-center justify-center py-4 md:py-8 flex-wrap gap-2">
+      {/* <ParticlesComponent /> */}
+      <div className="flex items-center justify-center py-4 md:py-8 flex-wrap gap-2">
         <button
           type="button"
-          class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
-          onClick={()=>setCategory("all")}
+          className="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
+          onClick={() => setCategory("all")}
         >
           All
         </button>
         <button
           type="button"
-          class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-          onClick={()=>setCategory("frontend")}
+          className="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+          onClick={() => setCategory("frontend")}
         >
           Frontend
         </button>
         <button
           type="button"
-          class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-          onClick={()=>setCategory("fullstack")}
+          className="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+          onClick={() => setCategory("fullstack")}
         >
           Full Stack
         </button>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {project.map((p) => (
           <div key={p._id} className="bg-slate-500 rounded-lg relative group overflow-hidden border-4 hover:scale-95 duration-200 border-cyan-700">
-            <img class="h-auto max-w-full rounded-lg" src={p.img} alt="" />
-            <div class="absolute -top-[120%] z-0 w-full h-full bg-gray-700 duration-300 group-hover:top-[0%] p-3 flex flex-col items-center justify-center gap-1">
+            {!imageLoaded[p._id] && (
+              <div className="h-auto max-w-full rounded-lg bg-gray-300 animate-pulse"></div>
+            )}
+            <img
+              className={`h-auto max-w-full rounded-lg ${imageLoaded[p._id] ? "block" : "hidden"}`}
+              src={p.img}
+              alt=""
+              onLoad={() => handleImageLoad(p._id)}
+            />
+            <div className="absolute -top-[120%] z-0 w-full h-full bg-gray-700 duration-300 group-hover:top-[0%] p-3 flex flex-col items-center justify-center gap-1">
               <h3 className="font-semibold tracking-wide text-xs">Project Name : <span className="">{p.name}</span></h3>
               <h4 className="text-xs tracking-wide text-center">Tech stack : {p.tech_stack} </h4>
               <div className="flex gap-3 items-center justify-center mt-3">
-                <a href={p.github_link} target="_blank"><button className="btn-primary">Code</button></a>
-                <a href={p.live_link} target="_blank"><button className="btn-primary">Live</button></a>
+                <a href={p.github_link} target="_blank" rel="noopener noreferrer"><button className="btn-primary">Code</button></a>
+                <a href={p.live_link} target="_blank" rel="noopener noreferrer"><button className="btn-primary">Live</button></a>
               </div>
             </div>
           </div>

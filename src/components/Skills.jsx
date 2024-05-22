@@ -37,7 +37,7 @@ const Skills = () => {
   ];
   return (
     <section id="skills" className="py-10 bg-transparent min-h-screen relative">
-      <ParticlesComponent/>
+      {/* <ParticlesComponent/> */}
       <div className="mt-8 text-gray-100 text-center">
         <h3 className="text-4xl font-semibold">
           My <span className="text-cyan-600">Skills</span>
