@@ -2,6 +2,7 @@ import React from "react";
 import {SiExpress, SiNextdotjs, SiTypescript} from 'react-icons/si'
 import ParticlesComponent from "./ParticlesComponent";
 
+
 const Skills = () => {
   const skills = [
     {

@@ -1,11 +1,16 @@
 import React from "react";
 import ParticlesComponent from "./ParticlesComponent";
+import Certificates from "./Certificates";
+import avatar from '../assets/images/avatar.svg'
+import { Fragment } from "react/cjs/react.production.min";
+import Academics from "./Academics";
 const About = () => {
   const info = [{ text: "Completed Projects", count: "24" }];
   return (
+    <Fragment>
     <section
       id="about"
-      className="lg:py-10 py-20 text-white min-h-screen w-full flex flex-col items-center justify-center bg-transparent sm:px-10 px-3"
+      className="lg:pt-20 pt-20 text-white w-full flex flex-col items-center justify-center bg-transparent sm:px-10 px-3"
     >
       {/* <ParticlesComponent/> */}
       <h3 className="text-4xl font-semibold">
@@ -16,21 +21,22 @@ const About = () => {
         <div className="py-2">
           <div className="text-gray-300 my-3 flex items-start justify-start flex-col gap-6">
             <p className=" sm:w-11/12 w-full p-1 text-left sm:p-0 !mx-0 box-border relative pl-4 sm:text-base text-sm ">
-              <span className="absolute top-0 left-0 w-[4px] h-full bg-gradient-to-b to-cyan-400 from-cyan-700 rounded-lg"></span>
-              I am a dedicated and passionate Full Stack Developer pursuing my
+              <span className="absolute top-0 left-0 lg:-left-3 w-[4px] h-full bg-gradient-to-b to-cyan-400 from-cyan-700 rounded-lg "></span>
+              <span className="">I am a dedicated and passionate Full Stack Developer pursuing my
               Master's in Computer Applications (MCA) with a strong foundation
               in Computer Applications (BCA). With an in-depth understanding of
               the MERN (MongoDB, Express.js, React.js, Node.js) stack, I
               specialize in crafting dynamic and scalable web applications. I'm
-              also certified in MERN stack 1year program from PWSkills.
+              also certified in MERN stack 1year program from PWSkills.</span>
             </p>
             <div className="flex gap-2">
               <a href="https://drive.google.com/file/d/1b7k6i-3tJWfHo983kNDMFxgP0xIbkP9f/view?usp=drive_link" target="_blank">
                 <button className="btn-primary">Resume</button>
               </a>
-              <a href="https://drive.google.com/file/d/1tjdQRSuBgbwUpZ4pEEcwUih2C_NN2H_S/view?usp=drive_link" target="_blank">
+              {/* <a href="https://drive.google.com/file/d/1tjdQRSuBgbwUpZ4pEEcwUih2C_NN2H_S/view?usp=drive_link" target="_blank">
                 <button className="btn-primary">Certificate</button>
-              </a>
+              </a> */}
+              <Certificates/>
             </div>
             <div className="flex items-center gap-7">
               {info.map((content) => (
@@ -45,9 +51,9 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center flex-col gap-7 bg-gray-500 opacity-95 rounded-lg sm:rotate-6 hover:scale-105 duration-300 hover:bg-gray-600 ">
-          <section className="flex items-center justify-center gap-5 flex-col bg-transparent opacity-90 md:px-10 sm:px-4 px-2 md:py-16 py-10 rounded-lg shadow-2xl ">
-            <h1>Education : </h1>
+        {/* <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center flex-col gap-7 bg-gray-500 opacity-95 rounded-lg sm:rotate-6 hover:scale-105 duration-300 hover:bg-gray-600 "> */}
+          {/* <section className="flex items-center justify-center gap-5 flex-col bg-transparent opacity-90 md:px-10 sm:px-4 px-2 md:py-16 py-10 rounded-lg shadow-2xl "> */}
+            {/* <h1>Education : </h1>
             <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm aboutImg p-2 md:rotate-12">
               <section className="flex justify-between items-center">
                 <div>MCA</div>
@@ -68,12 +74,19 @@ const About = () => {
                 I have successfully completed my BCA from LN College, gaining a
                 solid foundation in computer applications and software
                 development.
-              </section>
-            </div>
-          </section>
-        </div>
+              </section> */}
+            {/* </div> */}
+          {/* </section> */}
+        {/* </div> */}
+              <div className="w-[60%] lg:w-full">
+              <img className="w-80" src={avatar} alt="avatar" />
+              </div>
       </div>
     </section>
+    <section className="lg:py-10 py-20 text-white w-full flex flex-col items-center justify-center bg-transparent sm:px-10 px-3">
+      <Academics/>
+    </section>
+    </Fragment>
   );
 };
 
