@@ -30,7 +30,7 @@ const About = () => {
               also certified in MERN stack 1year program from PWSkills.</span>
             </p>
             <div className="flex gap-2">
-              <a href="https://drive.google.com/file/d/17TbB6Wzkoppx5JjwsFafsWYZbs3NN3J_/view?usp=sharing" target="_blank">
+              <a href="https://drive.google.com/file/d/10tfv9k5dMDz9OprnAf5GMzXga5Gx1JuC/view?usp=sharing" target="_blank">
                 <button className="btn-primary">Resume</button>
               </a>
               {/* <a href="https://drive.google.com/file/d/1tjdQRSuBgbwUpZ4pEEcwUih2C_NN2H_S/view?usp=drive_link" target="_blank">
