@@ -18,7 +18,7 @@ const Project = () => {
       img: project1,
       name: "Ecommerce App",
       github_link: "https://github.com/vickykrsingh/DD-Product.git",
-      live_link: "https://ddproduct.cyclic.app",
+      live_link: "https://ddproduct.onrender.com",
       tech_stack: "React.js Express.js Mongodb Node.js Bootstrap",
       category: "fullstack"
     },
